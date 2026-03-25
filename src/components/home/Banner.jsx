@@ -7,7 +7,7 @@ export const Banner = () => {
   const downloadCV = () => {};
   return (
     <>
-      <div className="hero-section ">
+      <div className="hero-section container mx-auto">
         <main>
           <div className="flex items-center justify-center mt-10">
             <img
@@ -56,37 +56,95 @@ export const Banner = () => {
             </p>
           </div>
         </section>
-
-        <section className="flex flex-col w-full mx-auto px-5 dark:bg-darkPrimary">
-          <div className="w-full mx-auto mt-5">
-            <h1 className="text-2xl font-bold w-full text-center my-2">
+        <section className="w-full mx-auto min-h-screen">
+          <div className="mx-auto mt-10 w-full max-w-2xl">
+            <h1 className="text-2xl font-bold w-full text-center my-10">
               Connect with me
             </h1>
-            <form action="" className=" grid justify-center items-center ">
-              <div className="flex justify-center items-center">
-                <div className="">
-                  <label htmlFor="FirstName">First name</label> 
-                  <input type="text" className="" />
+            <form className="space-y-6">
+              <div className="flex gap-4">
+                <div className="w-full relative">
+                  <input
+                    type="text"
+                    name="firstName"
+                    id="FirstName"
+                    required
+                    className="peer w-full border-b border-gray-600 px-4 py-2 focus:outline-none"
+                  />
+                  <label
+                    htmlFor="FirstName"
+                    className="absolute left-2 top-2 text-gray-400 cursor-auto text-sm transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
+                  >
+                    First Name
+                  </label>
                 </div>
-                <div>
-                  <input type="text" />
-                  <label htmlFor="LirstName">Lirst name</label>
+                <div className="w-full relative">
+                  <input
+                    type="text"
+                    name="LastName"
+                    id="lastname"
+                    required
+                    className="peer w-full border-b border-gray-600 px-4 py-2 focus:outline-none"
+                  />
+                  <label
+                    htmlFor="lastname"
+                    className="absolute left-2 top-2 text-gray-400 cursor-auto text-sm transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
+                  >
+                    Last Name
+                  </label>
                 </div>
               </div>
-              <div>
-                <input type="email" />
-                <label htmlFor="email">Email</label>
+              <div className="relative">
+                <input
+                  type="email"
+                  name="Email"
+                  id="email"
+                  required
+                  className="peer w-full border-b border-gray-600 px-4 py-2 focus:outline-none"
+                />
+                <label
+                  htmlFor="email"
+                  className="absolute left-2 top-2 text-gray-400 cursor-auto text-sm transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
+                >
+                  Email
+                </label>
               </div>
-              <div>
-                <input type="subject" />
-                <label htmlFor="subject">Subject</label>
+              <div className="relative">
+                <input
+                  type="text"
+                  name="Subject"
+                  id="subject"
+                  required
+                  className="peer w-full border-b border-gray-600 px-4 py-2 focus:outline-none"
+                />
+                <label
+                  htmlFor="subject"
+                  className="absolute left-2 top-2 text-gray-400 cursor-auto text-sm transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
+                >
+                  Subject
+                </label>
               </div>
-              <div>
-                <textarea name="" id=""></textarea>
-                <label htmlFor="message">Message</label>
+              <div className="relative">
+                <textarea
+                  name="Message"
+                  id="message"
+                  required
+                  className="peer w-full border-b border-gray-600 px-4 py-2 focus:outline-none"
+                ></textarea>
+                <label
+                  htmlFor="message"
+                  className="absolute left-2 top-2 text-gray-400 cursor-auto text-sm transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
+                >
+                  Message
+                </label>
               </div>
-              <div>
-                <button type="submit">Send</button>
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="px-40 py-2 rounded bg-[#262626] text-dark  text-white cursor-pointer transition"
+                >
+                  Send
+                </button>
               </div>
             </form>
           </div>
