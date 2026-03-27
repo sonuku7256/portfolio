@@ -1,7 +1,7 @@
 import React from "react";
 import { Skills } from "../pages/Skills";
 // import { Navbar } from "./Navbar";
-import image from "/src/assets/image.jpeg";
+import image from "/src/assets/me_image.jpeg";
 import { MdFileDownload } from "react-icons/md";
 export const Banner = () => {
   const downloadCV = () => {};
@@ -13,7 +13,7 @@ export const Banner = () => {
             <img
               src={image}
               alt="image"
-              className="w-60 h-60 rounded-full object-cover"
+              className="w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 rounded-full object-cover aspect-square"
             />
           </div>
           <div className="flex justify-center items-center font-bold my-6">
@@ -34,9 +34,9 @@ export const Banner = () => {
             <button
               type="file"
               onClick={downloadCV}
-              className="px-6 py-2 rounded border cursor-pointer hover:bg-gray-400 hover:text-white"
+              className="flex items-center gap-2 px-4 py-2 rounded border hover:bg-gray-400 :text-white"
             >
-              {/* <MdFileDownload /> */}
+              {<MdFileDownload className="text-lg" />}
               Resume
             </button>
           </div>
@@ -69,11 +69,11 @@ export const Banner = () => {
                     name="firstName"
                     id="FirstName"
                     required
-                    className="peer w-full border-b border-gray-600 px-4 py-2 focus:outline-none"
+                    className="peer w-full border-b-2 border-gray-500 py-2 focus:outline-none"
                   />
                   <label
                     htmlFor="FirstName"
-                    className="absolute left-2 top-2 text-gray-400 cursor-auto text-sm transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
+                    className="absolute left-0 top-2 text-gray-400 cursor-auto transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
                   >
                     First Name
                   </label>
@@ -84,11 +84,11 @@ export const Banner = () => {
                     name="LastName"
                     id="lastname"
                     required
-                    className="peer w-full border-b border-gray-600 px-4 py-2 focus:outline-none"
+                    className="peer w-full border-b-2 border-gray-500 py-2 focus:outline-none"
                   />
                   <label
                     htmlFor="lastname"
-                    className="absolute left-2 top-2 text-gray-400 cursor-auto text-sm transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
+                    className="absolute left-0 top-2 text-gray-400 cursor-auto transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
                   >
                     Last Name
                   </label>
@@ -100,11 +100,11 @@ export const Banner = () => {
                   name="Email"
                   id="email"
                   required
-                  className="peer w-full border-b border-gray-600 px-4 py-2 focus:outline-none"
+                  className="peer w-full border-b-2 border-gray-500 py-2 focus:outline-none"
                 />
                 <label
                   htmlFor="email"
-                  className="absolute left-2 top-2 text-gray-400 cursor-auto text-sm transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
+                  className="absolute left-0 top-2 text-gray-400 cursor-auto transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
                 >
                   Email
                 </label>
@@ -115,11 +115,11 @@ export const Banner = () => {
                   name="Subject"
                   id="subject"
                   required
-                  className="peer w-full border-b border-gray-600 px-4 py-2 focus:outline-none"
+                  className="peer w-full border-b-2 border-gray-500 py-2 focus:outline-none"
                 />
                 <label
                   htmlFor="subject"
-                  className="absolute left-2 top-2 text-gray-400 cursor-auto text-sm transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
+                  className="absolute left-0 top-2 text-gray-400 cursor-auto transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
                 >
                   Subject
                 </label>
@@ -129,11 +129,11 @@ export const Banner = () => {
                   name="Message"
                   id="message"
                   required
-                  className="peer w-full border-b border-gray-600 px-4 py-2 focus:outline-none"
+                  className="peer w-full border-b-2 border-gray-500 py-2 focus:outline-none"
                 ></textarea>
                 <label
                   htmlFor="message"
-                  className="absolute left-2 top-2 text-gray-400 cursor-auto text-sm transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
+                  className="absolute left-0 top-2 text-gray-400 cursor-auto transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
                 >
                   Message
                 </label>
@@ -149,6 +149,7 @@ export const Banner = () => {
             </form>
           </div>
         </section>
+        <hr className="mx-20 border-gray-400 border-t-2" />
       </div>
     </>
   );
