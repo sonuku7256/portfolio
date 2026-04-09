@@ -2,37 +2,36 @@ import React from "react";
 
 export const About = () => {
   return (
-    <>
-      <div>
-        <div>
-          <h1>About me</h1>
-        </div>
-        <div className="flex items-center justify-center">
+    <section className="px-4 py-10 md:py-16 bg-gray-100">
+      <div className="max-w-4xl mx-auto">
+        {/* Heading */}
+        <h1 className="text-4xl md:text-4xl font-bold text-gray-700 mb-6">
+          About me
+        </h1>
+        <div className="text-gray-600 text-base md:text-lg leading-relaxed space-y-4 text-start font-medium">
           <p>
-            I'm Vinay Gawade, a passionate full-stack web developer dedicated to
-            creating extraordinary digital experiences. With a constant passion
-            for knowledge and a love for coding, I explore innovative solutions
-            and master the art of problem-solving. Working as a software
-            engineer at Osseed Technologies, I push boundaries and expand my
-            expertise to craft exceptional web applications. I have skills in
-            both front-end and back-end development, allowing me to create
-            seamless user interfaces and integrate powerful functionalities
-            behind the scenes. Beyond code, I find inspiration in various
-            aspects of life. Whether diving into the captivating universe of
-            Marvel Studios movies, enjoying the storytelling in Anime, or
-            exploring the wonders of the world through travel, these experiences
-            fuel my creativity. Driven by a desire to make a positive impact, I
-            use technology to solve real-life problems. From developing projects
-            that simplify everyday tasks to contributing to digital
-            advancements, my goal is to improve lives and create meaningful
-            connections. Join me on this exciting journey as we blend
-            technology, creativity, and a passion for exploration. Together, we
-            can bring your ideas to life and make a lasting impact in the
-            digital world. Are you ready to innovate, create, and make a
-            difference? Let's embark on this adventure together.
+            I am Sonu Kumar Pandit, a passionate full stack web developer
+            currently pursuing my Master of Computer Application (MCA). I have a
+            strong foundation in web technologies including HTML, CSS,
+            JavaScript, and React.js, along with backend development using
+            Node.js and Express.js.
+          </p>
+
+          <p>
+            I enjoy building responsive and user-friendly web applications that
+            solve real-world problems. My projects, such as an online e-paan
+            store and a travel booking platform, reflect my ability to develop
+            practical and scalable solutions.
+          </p>
+
+          <p>
+            I am a quick learner with strong time management and teamwork
+            skills, always eager to explore new technologies and enhance my
+            development expertise. My goal is to contribute to innovative
+            projects while continuously growing as a developer.
           </p>
         </div>
       </div>
-    </>
+    </section>
   );
 };

@@ -11,8 +11,8 @@ import { FaGithub } from "react-icons/fa";
 export const Skills = () => {
   return (
     <>
-      <section className="container mx-auto w-[80%] mt-12">
-        <h1 className="w-full font-bold text-3xl text-left my-2 font-inter">
+      <section className="container mx-auto w-[80%] md:mt-10">
+        <h1 className="w-full font-bold text-3xl font-inter">
           My Top Skills
         </h1>
         <div className="grid my-10 gap-4 grid-cols-3">

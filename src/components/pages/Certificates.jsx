@@ -1,19 +1,33 @@
-import React from 'react'
-
 export const Certificates = () => {
   return (
-    <>
-    <div>
-      <div>
-        <h1>Certificates</h1>
-        <p>I've participated in contests and courses and get certified in many skills. You can find the certificates below.</p>
-      </div>
-      <div>
-        <div>
+    <section className="px-4 py-5 md:py-10 bg-gray-100  select-none">
+      <div className="max-w-4xl mx-auto text-center">
+        <h1 className="text-3xl text-start md:text-5xl font-bold text-gray-800 mb-4">
+          Certificates
+        </h1>
+        <p className="text-gray-600 mb-8 text-start">
+          I've participated in contests and courses and earned certifications in
+          many skills.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-2">
+          <div className="bg-white shadow-lg rounded-xl overflow-hidden">
+            <img
+              src="src/assets/img.jpg"
+              alt="FSD certificates"
+              className="w-full object-cover hover:scale-105 transition duration-300"
+            />
+          </div>
+          
+          <div className="bg-white shadow-lg rounded-xl overflow-hidden">
+            <img
+              src="src/assets/img.jpg"
+              alt="FSD certificates"
+              className="w-full object-cover hover:scale-105 transition duration-300"
+            />
+          </div>
           
         </div>
       </div>
-    </div>
-    </>
-  )
-}
+    </section>
+  );
+};

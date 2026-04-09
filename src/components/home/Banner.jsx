@@ -9,36 +9,35 @@ export const Banner = () => {
   };
   return (
     <>
-      <div className="hero-section container mx-auto">
-        <main>
-          <div className="flex items-center justify-center mt-10">
+      <div className="hero-section container mx-auto px-4">
+        <main className="select-none min-h-screen -translate-y-15 md:translate-y-10 flex flex-col items-center justify-center sm:justify-start px-8">
+          <div className="flex justify-center ">
             <img
               src={image}
               alt="image"
-              className="w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 rounded-full object-cover aspect-square"
+              className="w-60 h-60 sm:w-40 sm:h-40 md:w-52 md:h-52 lg:w-64 lg:h-64 rounded-full object-cover"
             />
           </div>
-          <div className="flex justify-center items-center font-bold my-6">
-            <h2 className="text-gray-700 text-5xl">Sonu kr pandit</h2>
+          <div className="flex justify-center font-bold my-6">
+            <h2 className="text-gray-700 text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-center">
+              Sonu kr pandit
+            </h2>
           </div>
-          <div className="flex justify-center items-center text-gray-700 font-bold flex-col">
-            <div className="banner-description">
-              <p>Innovative Web Developer Pushing Boundaries with Code 😉✌️</p>
-            </div>
-            <div className="banner-decription-edu">
-              <p>
-                🎓 Master in Computer Application | Eager to Explore Diverse Web
-                Technologies.
-              </p>
-            </div>
+          <div className="flex justify-center text-gray-700 font-bold flex-col text-center">
+            <p className="text-1xl sm:text-base md:text-lg">
+              Innovative Web Developer Pushing Boundaries with Code 😉✌️
+            </p>
+            <p className="text-1xl sm:text-base md:text-lg mt-2">
+              🎓 Master in Computer Application | Eager to Explore Diverse Web
+              Technologies.
+            </p>
           </div>
-          <div className="flex justify-center my-10 ">
+          <div className="flex justify-center my-6">
             <button
-              type="file"
               onClick={viewResume}
-              className="flex items-center gap-2 px-4 py-2 rounded border hover:cursor-pointer hover:bg-gray-400"
+              className="flex items-center gap-2 px-4 py-2 rounded border hover:bg-gray-400 cursor-pointer"
             >
-              {<MdFileDownload className="text-lg" />}
+              <MdFileDownload className="text-lg" />
               Resume
             </button>
           </div>
@@ -48,7 +47,7 @@ export const Banner = () => {
           <h1 className="font-bold text-4xl">
             Let's Connect and Create Digital Magic 🧙 🌠!
           </h1>
-          <div className="mx-30">
+          <div className="mx-auto max-w-2xl px-4">
             <p className="px-4 py-2 font-medium">
               Got something on your mind? Let's make it happen! ✨ Whether you
               need help with a project or just fancy a friendly chat, I'm all
@@ -56,14 +55,13 @@ export const Banner = () => {
             </p>
           </div>
         </section>
-        {/* <section className="w-full mx-auto min-h-screen"> */}
         <section className="">
           <div className="mx-auto mt-10 w-full max-w-2xl">
             <h1 className="text-2xl font-bold w-full text-center my-10">
               Connect with me
             </h1>
             <form className="space-y-6">
-              <div className="flex gap-4">
+              <div className="flex gap-4 sm:flex-row">
                 <div className="w-full relative">
                   <input
                     type="text"
@@ -142,7 +140,7 @@ export const Banner = () => {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="px-40 py-2 rounded bg-[#262626] text-dark text-white cursor-pointer transition"
+                  className="w-full sm:w-auto px-40 py-2 rounded bg-[#262626] text-white cursor-pointer transition"
                 >
                   Send
                 </button>
@@ -150,7 +148,7 @@ export const Banner = () => {
             </form>
           </div>
         </section>
-        <hr className="mx-50 border-gray-400 border-t-2 mt-15" />
+        <hr className="mx-auto max-w-4xl border-gray-400 border-t-2 mt-10" />
       </div>
     </>
   );
