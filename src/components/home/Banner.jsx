@@ -9,8 +9,8 @@ export const Banner = () => {
   };
   return (
     <>
-      <div className="hero-section container mx-auto px-4 min-h-screen">
-        <main className="select-none -translate-y-15 md:translate-y-10 flex flex-col items-center justify-center sm:justify-start px-8">
+      <div className="hero-section container mx-auto px-4 sm:min-h-screen">
+        <main className="select-none flex flex-col items-center justify-center min-h-screen md:min-h-0 md:translate-y-10 px-8">
           <div className="flex justify-center ">
             <img
               src={image}
@@ -25,7 +25,7 @@ export const Banner = () => {
           </div>
           <div className="flex justify-center text-gray-700 font-bold flex-col text-center">
             <p className="text-1xl sm:text-base md:text-lg">
-              Innovative Web Developer Pushing Boundaries with Code 😉✌️
+              Innovative Web Developer Pushing Boundaries with Code.
             </p>
             <p className="text-1xl sm:text-base md:text-lg mt-2">
               🎓 Master in Computer Applications | Eager to Explore Diverse Web
@@ -42,26 +42,30 @@ export const Banner = () => {
             </button>
           </div>
         </main>
-        <Skills />
-        <section className="digital-magic w-full-width text-center dark:bg-darkPrimary ">
+        <div className="hidden md:block">
+          <Skills />
+        </div>
+        {/* <section className="digital-magic w-full-width text-center dark:bg-darkPrimary"> */}
+        <section className="digital-magic w-full text-center px-4 py-8 dark:bg-darkPrimary">
           <h1 className="font-bold text-4xl">
-            Let's Connect and Create Digital Magic 🧙 🌠!
+            Let's Connect and Create Digital Magic!
           </h1>
           <div className="mx-auto max-w-2xl px-4">
             <p className="px-4 py-2 font-medium">
-              Got something on your mind? Let's make it happen! ✨ Whether you
-              need help with a project or just fancy a friendly chat, I'm all
-              ears! 🤝 ✉️
+              Got something on your mind? Let's make it happen! Whether you need
+              help with a project or just fancy a friendly chat, I'm all ears!
+              🤝 ✉️
             </p>
           </div>
         </section>
-        <section className="">
+        <section className="px-4">
           <div className="mx-auto mt-10 w-full max-w-2xl">
             <h1 className="text-2xl font-bold w-full text-center my-10">
               Connect with me
             </h1>
             <form className="space-y-6">
-              <div className="flex gap-4 sm:flex-row">
+              {/* <div className="flex gap-4 sm:flex-row"> */}
+              <div className="flex flex-col sm:flex-row gap-4">
                 <div className="w-full relative">
                   <input
                     type="text"
@@ -140,7 +144,7 @@ export const Banner = () => {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="w-full sm:w-auto px-40 py-2 rounded bg-[#262626] text-white cursor-pointer transition"
+                  className="w-full sm:w-auto px-8 sm:px-16 py-2 rounded bg-[#262626] text-white cursor-pointer transition"
                 >
                   Send
                 </button>
