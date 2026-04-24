@@ -9,7 +9,7 @@ export const Banner = () => {
   };
   return (
     <>
-      <div className="hero-section container mx-auto px-4 sm:min-h-screen">
+      <div className="hero-section container mx-auto px-5 sm:min-h-screen -mt-15">
         <main className="select-none flex flex-col items-center justify-center min-h-screen md:min-h-0 md:translate-y-10 px-8">
           <div className="flex justify-center ">
             <img
