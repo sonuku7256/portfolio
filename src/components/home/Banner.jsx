@@ -9,7 +9,7 @@ export const Banner = () => {
   };
   return (
     <>
-      <div className="hero-section container mx-auto px-5 sm:min-h-screen -mt-15">
+      <div className="hero-section container mx-auto px-5 sm:min-h-screen">
         <main className="select-none flex flex-col items-center justify-center min-h-screen md:min-h-0 md:translate-y-10 px-8">
           <div className="flex justify-center ">
             <img
@@ -45,7 +45,6 @@ export const Banner = () => {
         <div className="hidden md:block">
           <Skills />
         </div>
-        {/* <section className="digital-magic w-full-width text-center dark:bg-darkPrimary"> */}
         <section className="digital-magic w-full text-center px-4 py-8 dark:bg-darkPrimary">
           <h1 className="font-bold text-4xl">
             Let's Connect and Create Digital Magic!
@@ -64,7 +63,6 @@ export const Banner = () => {
               Connect with me
             </h1>
             <form className="space-y-6">
-              {/* <div className="flex gap-4 sm:flex-row"> */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <div className="w-full relative">
                   <input
