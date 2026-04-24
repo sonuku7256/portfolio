@@ -5,12 +5,12 @@ import { MdFileDownload } from "react-icons/md";
 
 export const Banner = () => {
   const viewResume = () => {
-    window.open("/Sonu Kr Pandit CV.pdf", "_blank");
+    window.open("/Sonu Kr Pandit (MERN).pdf", "_blank");
   };
   return (
     <>
-      <div className="hero-section container mx-auto px-4">
-        <main className="select-none min-h-screen -translate-y-15 md:translate-y-10 flex flex-col items-center justify-center sm:justify-start px-8">
+      <div className="hero-section container mx-auto px-4 min-h-screen">
+        <main className="select-none -translate-y-15 md:translate-y-10 flex flex-col items-center justify-center sm:justify-start px-8">
           <div className="flex justify-center ">
             <img
               src={image}
@@ -28,7 +28,7 @@ export const Banner = () => {
               Innovative Web Developer Pushing Boundaries with Code 😉✌️
             </p>
             <p className="text-1xl sm:text-base md:text-lg mt-2">
-              🎓 Master in Computer Application | Eager to Explore Diverse Web
+              🎓 Master in Computer Applications | Eager to Explore Diverse Web
               Technologies.
             </p>
           </div>

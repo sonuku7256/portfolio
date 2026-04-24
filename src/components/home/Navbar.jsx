@@ -5,10 +5,9 @@ export const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="relative lg:text-xl  lg:flex z-50">
+    <nav className="relative lg:text-xl lg:flex z-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-14">
-          {/* <h1 className="font-bold text-lg">Sonu kr pandit</h1> */}
           <ul className="hidden md:flex gap-4 text-gray-600">
             <li className="hover:bg-gray-200 px-2 rounded font-bold">
               <Link to="/">Home</Link>

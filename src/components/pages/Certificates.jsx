@@ -1,3 +1,7 @@
+import certificate from "../../assets/js.jpg";
+import jscertificate from "../../assets/img.jpg";
+import internship from "../../assets/internship.jpeg";
+
 export const Certificates = () => {
   return (
     <section className="px-4 py-5 md:py-10 bg-gray-100  select-none">
@@ -12,20 +16,25 @@ export const Certificates = () => {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-2">
           <div className="bg-white shadow-lg rounded-xl overflow-hidden">
             <img
-              src="src/assets/img.jpg"
+              src={certificate}
               alt="FSD certificates"
               className="w-full object-cover hover:scale-105 transition duration-300"
             />
           </div>
-          
           <div className="bg-white shadow-lg rounded-xl overflow-hidden">
             <img
-              src="src/assets/img.jpg"
-              alt="FSD certificates"
+              src={internship}
+              alt="Internship Certificates"
               className="w-full object-cover hover:scale-105 transition duration-300"
             />
           </div>
-          
+          <div className="bg-white shadow-lg rounded-xl overflow-hidden">
+            <img
+              src={jscertificate}
+              alt="JavaScript certificates"
+              className="w-full object-cover hover:scale-105 transition duration-300"
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -9,7 +9,6 @@ import { Stats } from "./components/pages/Stats";
 import { Utilities } from "./components/pages/Utilities";
 import { Blogs } from "./components/pages/Blogs";
 import { Certificates } from "./components/pages/Certificates";
-// import { Privacy } from "./components/pages/Privacy";
 
 export const App = () => {
   return (
@@ -26,7 +25,6 @@ export const App = () => {
               <Route path="/Utilities" element={<Utilities />} />
               <Route path="/Blogs" element={<Blogs />} />
               <Route path="/Certificates" element={<Certificates />} />
-              {/* <Route path="/Privacy" element={<Privacy />} /> */}
             </Routes>
           </main>
           <Footer />
