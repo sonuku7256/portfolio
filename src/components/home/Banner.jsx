@@ -5,7 +5,7 @@ import { MdFileDownload } from "react-icons/md";
 
 export const Banner = () => {
   const viewResume = () => {
-    window.open("/Sonu Kr Pandit (MERN).pdf", "_blank");
+    window.open("/Sonu (Front-end Developer).pdf", "_blank");
   };
   return (
     <>

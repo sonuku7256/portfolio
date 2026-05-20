@@ -12,9 +12,7 @@ export const Skills = () => {
   return (
     <>
       <section className="container mx-auto w-[80%] md:mt-10">
-        <h1 className="w-full font-bold text-3xl font-inter">
-          My Top Skills
-        </h1>
+        <h1 className="w-full font-bold text-3xl font-inter">My Top Skills</h1>
         <div className="grid my-10 gap-4 grid-cols-3">
           <div className="p-4 flex items-center justify-center sm:justify-start gap-4 bg-gray-100 hover:bg-white dark:bg-darkPrimary hover:dark:bg-darkSecondary border rounded-sm border-gray-300 dark:border-neutral-400 transform origin-center md:origin-top group">
             <div className="relative transition group-hover:scale-110 sm:group-hover ">
@@ -40,14 +38,7 @@ export const Skills = () => {
               Javascript
             </p>
           </div>
-          <div className="p-4 flex items-center justify-center sm:justify-start gap-4 bg-gray-100 hover:bg-white dark:bg-darkPrimary hover:dark:bg-darkSecondary border rounded-sm border-gray-300 dark:border-neutral-400 transform origin-center md:origin-top group">
-            <div className="relative transition group-hover:scale-110 sm:group-hover ">
-              <FaPhp className="w-7 h-7" />
-            </div>
-            <p className="hidden sm:inline-flex text-sm md:text-base font-semibold select-none pointer-events-none">
-              PHP
-            </p>
-          </div>
+
           <div className="p-4 flex items-center justify-center sm:justify-start gap-4 bg-gray-100 hover:bg-white dark:bg-darkPrimary hover:dark:bg-darkSecondary border rounded-sm border-gray-300 dark:border-neutral-400 transform origin-center md:origin-top group">
             <div className="relative transition group-hover:scale-110 sm:group-hover ">
               <SiMysql className="w-7 h-7" />
