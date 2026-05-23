@@ -68,12 +68,20 @@ export const Navbar = () => {
               <Link
                 onClick={() => setOpen(false)}
                 className="block px-4 py-3 hover:bg-gray-100"
+                to="/Skills"
+              >
+                Skills
+              </Link>
+            </li>
+            <li className="border-b">
+              <Link
+                onClick={() => setOpen(false)}
+                className="block px-4 py-3 hover:bg-gray-100"
                 to="/Utilities"
               >
                 Utilities
               </Link>
             </li>
-
             <li className="border-b">
               <Link
                 onClick={() => setOpen(false)}

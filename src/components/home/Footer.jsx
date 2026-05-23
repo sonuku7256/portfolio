@@ -32,6 +32,14 @@ export const Footer = () => {
             <li>
               <Link
                 className="inline-block px-2 hover:text-black transition"
+                to="/Skills"
+              >
+                Skills
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="inline-block px-2 hover:text-black transition"
                 to="/Utilities"
               >
                 Utilities
