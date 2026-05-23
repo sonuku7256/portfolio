@@ -9,10 +9,7 @@ export const Footer = () => {
           <h3 className="text-lg font-semibold mb-3 px-2">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <Link
-                className="inline-block px-2 hover:text-black transition"
-                to="/"
-              >
+              <Link className="inline-block px-2 hover:text-black transition" to="/">
                 Home
               </Link>
             </li>

@@ -8,6 +8,7 @@ import { SiTailwindcss } from "react-icons/si";
 import { FaJava } from "react-icons/fa6";
 import { RiReactjsLine } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa";
+
 export const Skills = () => {
   return (
     <>
