@@ -1,157 +1,174 @@
-import React from "react";
+import React, { useState } from "react";
 import image from "/src/assets/me_image.jpeg";
 import { Skills } from "../pages/Skills";
-import { MdFileDownload } from "react-icons/md";
+import { MdFileDownload, MdOutlineMailOutline } from "react-icons/md";
+import { FiArrowUpRight, FiGithub, FiLinkedin } from "react-icons/fi";
+
+const FontImports = () => (
+  <style>{`
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+    .font-display { font-family: 'Space Grotesk', sans-serif; }
+    .font-body { font-family: 'Inter', sans-serif; }
+    .font-code { font-family: 'JetBrains Mono', monospace; }
+
+    @keyframes blink-caret {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    .caret {
+      animation: blink-caret 1s step-end infinite;
+    }
+
+    @keyframes float-glow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    .float-glow {
+      animation: float-glow 6s ease-in-out infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .caret, .float-glow { animation: none; }
+    }
+  `}</style>
+);
 
 export const Home = () => {
+  const [submitted, setSubmitted] = useState(false);
+
   const viewResume = () => {
     window.open("/Sonu (Front-end Developer).pdf", "_blank");
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
   return (
     <>
-      <div className="hero-section container mx-auto px-5 sm:min-h-screen">
-        <main className="select-none flex flex-col items-center justify-center min-h-screen md:min-h-0 md:translate-y-10 px-8">
-          <div className="flex justify-center ">
-            <img
-              src={image}
-              alt="image"
-              className="w-60 h-60 sm:w-40 sm:h-40 md:w-52 md:h-52 lg:w-64 lg:h-64 rounded-full object-cover"
-            />
+      <FontImports />
+      <div className="font-body bg-[#0D1117] text-[#E6EDF3] selection:bg-[#7EE787] selection:text-[#0D1117]">
+        <section className="container mx-auto px-5 sm:px-8 pt-24 pb-20 min-h-screen flex flex-col justify-center">
+          <div className="grid md:grid-cols-[auto_1fr] gap-10 md:gap-16 items-center">
+            <div className="flex justify-center md:justify-start">
+              <div className="relative float-glow">
+                <div className="absolute -inset-1 rounded-2xl `bg-gradient-to-br` from-[#7EE787]/40 to-[#FFA657]/30 blur-xl" />
+                <img
+                  src={image}
+                  alt="Sonu Kr Pandit"
+                  className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-60 md:h-60 rounded-2xl object-cover border border-[#30363D]"
+                />
+              </div>
+            </div>
+            <div className="w-full max-w-xl rounded-xl border border-[#30363D] bg-[#161B22] shadow-2xl shadow-black/40 overflow-hidden">
+              <div className="flex items-center gap-2 px-4 py-3 border-b border-[#30363D] bg-[#0D1117]">
+                <span className="w-3 h-3 rounded-full bg-[#FF5F56]" />
+                <span className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
+                <span className="w-3 h-3 rounded-full bg-[#27C93F]" />
+                <span className="font-code text-xs text-[#8B949E] ml-3">about.js</span>
+              </div>
+
+              {/* code body */}
+              <div className="font-code text-sm sm:text-base leading-7 px-5 py-6">
+                <p><span className="text-[#FF7B72]">const</span> <span className="text-[#79C0FF]">developer</span> = {"{"}</p>
+                <p className="pl-4">
+                  <span className="text-[#7EE787]">name</span>: <span className="text-[#A5D6FF]">"Sonu Kr Pandit"</span>,
+                </p>
+                <p className="pl-4">
+                  <span className="text-[#7EE787]">role</span>: <span className="text-[#A5D6FF]">"Front-end Developer"</span>,
+                </p>
+                <p className="pl-4">
+                  <span className="text-[#7EE787]">education</span>: <span className="text-[#A5D6FF]">"MCA"</span>,
+                </p>
+                <p className="pl-4">
+                  <span className="text-[#7EE787]">status</span>: <span className="text-[#A5D6FF]">"exploring new stacks"</span>
+                  <span className="caret text-[#E6EDF3]">|</span>
+                </p>
+                <p>{"}"}</p>
+              </div>
+            </div>
           </div>
-          <div className="flex justify-center font-bold my-6">
-            <h2 className="text-gray-700 text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-center">
-              Sonu kr pandit
-            </h2>
-          </div>
-          <div className="flex justify-center text-gray-700 font-bold flex-col text-center">
-            <p className="text-1xl sm:text-base md:text-lg">
-              Innovative Web Developer Pushing Boundaries with Code.
-            </p>
-            <p className="text-1xl sm:text-base md:text-lg mt-2">
-              🎓 Master in Computer Applications | Eager to Explore Diverse Web
-              Technologies.
-            </p>
-          </div>
-          <div className="flex justify-center my-6">
+          <div className="flex flex-wrap gap-4 mt-10">
             <button
               onClick={viewResume}
-              className="flex items-center gap-2 px-4 py-2 rounded border hover:bg-gray-400 cursor-pointer"
+              className="group flex items-center gap-2 px-6 py-3 rounded-lg bg-[#7EE787] text-[#0D1117] font-display font-semibold text-sm cursor-pointer transition-transform hover:-translate-y-0.5"
             >
               <MdFileDownload className="text-lg" />
               Resume
             </button>
-          </div>
-        </main>
-        <div className="hidden md:block">
-          <Skills />
-        </div>
-        <section className="digital-magic w-full text-center px-4 py-8 dark:bg-darkPrimary">
-          <h1 className="font-bold text-4xl">
-            Let's Connect and Create Digital Magic!
-          </h1>
-          <div className="mx-auto max-w-2xl px-4">
-            <p className="px-4 py-2 font-medium">
-              Got something on your mind? Let's make it happen! Whether you need
-              help with a project or just fancy a friendly chat, I'm all ears!
-              🤝 ✉️
-            </p>
+            <a
+              href="#connect"
+              className="group flex items-center gap-2 px-6 py-3 rounded-lg border border-[#30363D] font-display font-semibold text-sm cursor-pointer transition-colors hover:border-[#7EE787] hover:text-[#7EE787]"
+            >
+              Get in touch
+              <FiArrowUpRight className="text-lg transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
           </div>
         </section>
-        <section className="px-4">
-          <div className="mx-auto mt-10 w-full max-w-2xl">
-            <h1 className="text-2xl font-bold w-full text-center my-10">
+        <div className="hidden md:block container mx-auto px-5 sm:px-8">
+          <Skills />
+        </div>
+        <section id="connect" className="container mx-auto px-5 sm:px-8 py-24">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl mb-4">
               Connect with me
-            </h1>
-            <form className="space-y-6">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <div className="w-full relative">
-                  <input
-                    type="text"
-                    name="firstName"
-                    id="FirstName"
-                    required
-                    className="peer w-full border-b-2 border-gray-500 py-2 focus:outline-none"
-                  />
-                  <label
-                    htmlFor="FirstName"
-                    className="absolute left-0 top-2 text-gray-400 cursor-auto transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
-                  >
-                    First Name
-                  </label>
-                </div>
-                <div className="w-full relative">
-                  <input
-                    type="text"
-                    name="LastName"
-                    id="lastname"
-                    required
-                    className="peer w-full border-b-2 border-gray-500 py-2 focus:outline-none"
-                  />
-                  <label
-                    htmlFor="lastname"
-                    className="absolute left-0 top-2 text-gray-400 cursor-auto transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
-                  >
-                    Last Name
-                  </label>
-                </div>
+            </h2>
+
+          </div>
+          <div className="max-w-2xl mx-auto mt-12 rounded-xl border border-[#30363D] bg-[#161B22] overflow-hidden">
+            <div className="flex items-center gap-2 px-4 py-3 border-b border-[#30363D] bg-[#0D1117]">
+              <span className="w-3 h-3 rounded-full bg-[#FF5F56]" />
+              <span className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
+              <span className="w-3 h-3 rounded-full bg-[#27C93F]" />
+              <span className="font-code text-xs text-[#8B949E] ml-3">message.js</span>
+            </div>
+
+            <form onSubmit={handleSubmit} className="p-6 sm:p-8 space-y-5">
+              <div className="grid sm:grid-cols-2 gap-5">
+                <Field label="first_name" id="FirstName" name="firstName" />
+                <Field label="last_name" id="lastname" name="LastName" />
               </div>
-              <div className="relative">
-                <input
-                  type="email"
-                  name="Email"
-                  id="email"
-                  required
-                  className="peer w-full border-b-2 border-gray-500 py-2 focus:outline-none"
-                />
-                <label
-                  htmlFor="email"
-                  className="absolute left-0 top-2 text-gray-400 cursor-auto transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
-                >
-                  Email
-                </label>
-              </div>
-              <div className="relative">
-                <input
-                  type="text"
-                  name="Subject"
-                  id="subject"
-                  required
-                  className="peer w-full border-b-2 border-gray-500 py-2 focus:outline-none"
-                />
-                <label
-                  htmlFor="subject"
-                  className="absolute left-0 top-2 text-gray-400 cursor-auto transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
-                >
-                  Subject
-                </label>
-              </div>
-              <div className="relative">
-                <textarea
-                  name="Message"
-                  id="message"
-                  required
-                  className="peer w-full border-b-2 border-gray-500 py-2 focus:outline-none"
-                ></textarea>
-                <label
-                  htmlFor="message"
-                  className="absolute left-0 top-2 text-gray-400 cursor-auto transition-all peer-focus:-top-3 peer-focus:text-sm peer-focus:text-black peer-valid:-top-4 peer-valid:text-sm"
-                >
-                  Message
-                </label>
-              </div>
-              <div className="text-center">
+              <Field label="email" id="email" name="Email" type="email" />
+              <Field label="subject" id="subject" name="Subject" />
+              <Field label="message" id="message" name="Message" textarea />
+
+              <div className="pt-2 flex flex-col sm:flex-row items-center gap-4 justify-between">
                 <button
                   type="submit"
-                  className="w-full sm:w-auto px-8 sm:px-16 py-2 rounded bg-[#262626] text-white cursor-pointer transition"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3 rounded-lg bg-[#7EE787] text-[#0D1117] font-display font-semibold text-sm cursor-pointer transition-transform hover:-translate-y-0.5"
                 >
-                  Send
+                  <MdOutlineMailOutline className="text-lg" />
+                  Send message
                 </button>
+                {submitted && (
+                  <p className="font-code text-xs text-[#7EE787]">
+                    sent — thanks, I'll reply soon
+                  </p>
+                )}
               </div>
             </form>
           </div>
         </section>
-        <hr className="mx-auto max-w-4xl border-gray-400 border-t-2 mt-10" />
       </div>
     </>
+  );
+};
+const Field = ({ label, id, name, type = "text", textarea = false }) => {
+  const baseClasses =
+    "w-full bg-[#0D1117] border border-[#30363D] rounded-lg px-4 py-3 text-sm font-body text-[#E6EDF3] placeholder:text-[#8B949E] focus:outline-none focus:border-[#7EE787] transition-colors";
+
+  return (
+    <div>
+      <label htmlFor={id} className="block font-code text-xs text-[#8B949E] mb-2">
+        {label}
+      </label>
+      {textarea ? (
+        <textarea id={id} name={name} required rows={4} className={baseClasses} />
+      ) : (
+        <input id={id} name={name} type={type} required className={baseClasses} />
+      )}
+    </div>
   );
 };

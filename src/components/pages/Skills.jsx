@@ -1,84 +1,57 @@
-import React from "react";
-import { FaHtml5 } from "react-icons/fa6";
-import { FaCss3Alt } from "react-icons/fa";
-import { FaJsSquare } from "react-icons/fa";
-import { FaPhp } from "react-icons/fa6";
-import { SiMysql } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaGithub } from "react-icons/fa";
 import { FaJava } from "react-icons/fa6";
 import { RiReactjsLine } from "react-icons/ri";
-import { FaGithub } from "react-icons/fa";
+import { SiMysql, SiTailwindcss, SiMongodb, SiNodedotjs } from "react-icons/si";
+import { TbBrandVercel } from "react-icons/tb";
+
+const FontImports = () => (
+  <style>{`
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+    .font-display { font-family: 'Space Grotesk', sans-serif; }
+    .font-body { font-family: 'Inter', sans-serif; }
+    .font-code { font-family: 'JetBrains Mono', monospace; }
+  `}</style>
+);
+
+const SKILLS = [
+  { name: "html5", Icon: FaHtml5, color: "#E44D26" },
+  { name: "css3", Icon: FaCss3Alt, color: "#2965F1" },
+  { name: "javascript", Icon: FaJsSquare, color: "#F0DB4F" },
+  { name: "mysql", Icon: SiMysql, color: "#4479A1" },
+  { name: "tailwindcss", Icon: SiTailwindcss, color: "#38BDF8" },
+  { name: "java", Icon: FaJava, color: "#F58219" },
+  { name: "react", Icon: RiReactjsLine, color: "#61DAFB" },
+  { name: "github", Icon: FaGithub, color: "#E6EDF3" },
+  { name: "mongodb", Icon: SiMongodb, color: "#47A248" },
+  { name: "node.js", Icon: SiNodedotjs, color: "#5FA04E" },
+  { name: "vercel", Icon: TbBrandVercel, color: "#E6EDF3" },
+];
 
 export const Skills = () => {
   return (
     <>
-      <section className="container mx-auto w-[80%] md:mt-10">
-        <h1 className="w-full font-bold text-3xl font-inter">My Top Skills</h1>
-        <div className="grid my-10 gap-4 grid-cols-3">
-          <div className="p-4 flex items-center justify-center sm:justify-start gap-4 bg-gray-100 hover:bg-white dark:bg-darkPrimary hover:dark:bg-darkSecondary border rounded-sm border-gray-300 dark:border-neutral-400 transform origin-center md:origin-top group">
-            <div className="relative transition group-hover:scale-110 sm:group-hover ">
-              <FaHtml5 className="w-7 h-7" />
+      <FontImports />
+      <section className="w-full bg-[#0D1117] py-10">
+        <div className="font-body container mx-auto w-[90%] md:w-[80%] text-[#E6EDF3]">
+          <h1 className="font-display font-bold text-2xl md:text-3xl mb-6">Skills</h1>
+          <div className="rounded-xl border border-[#30363D] bg-[#161B22] overflow-hidden">
+            <div className="flex items-center gap-2 px-4 py-3 border-b border-[#30363D] bg-[#0D1117]">
+              <span className="w-3 h-3 rounded-full bg-[#FF5F56]" />
+              <span className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
+              <span className="w-3 h-3 rounded-full bg-[#27C93F]" />
+              <span className="font-code text-xs text-[#8B949E] ml-3">skills.json</span>
             </div>
-            <p className="hidden sm:inline-flex text-sm md:text-base font-semibold select-none pointer-events-none">
-              HTML
-            </p>
-          </div>
-          <div className="p-4 flex items-center justify-center sm:justify-start gap-4 bg-gray-100 hover:bg-white dark:bg-darkPrimary hover:dark:bg-darkSecondary border rounded-sm border-gray-300 dark:border-neutral-400 transform origin-center md:origin-top group">
-            <div className="relative transition group-hover:scale-110 sm:group-hover">
-              <FaCss3Alt className="w-7 h-7" />
+            <div className="p-5 sm:p-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {SKILLS.map(({ name, Icon, color }) => (
+                  <div key={name} className="group flex items-center gap-3 p-3 rounded-lg border border-[#30363D] bg-[#0D1117] hover:border-[#7EE787] transition-colors">
+                    <Icon className="text-2xl shrink-0 transition-transform group-hover:scale-110" style={{ color }} />
+                    <span className="font-code text-sm text-[#8B949E] truncate">{name}</span>
+                    <span >{Icon}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-            <p className="hidden sm:inline-flex text-sm md:text-base font-semibold select-none pointer-events-none">
-              CSS
-            </p>
-          </div>
-          <div className="p-4 flex items-center justify-center sm:justify-start gap-4 bg-gray-100 hover:bg-white dark:bg-darkPrimary hover:dark:bg-darkSecondary border rounded-sm border-gray-300 dark:border-neutral-400 transform origin-center md:origin-top group">
-            <div className="relative transition group-hover:scale-110 sm:group-hover ">
-              <FaJsSquare className="w-7 h-7" />
-            </div>
-            <p className="hidden sm:inline-flex text-sm md:text-base font-semibold select-none pointer-events-none">
-              Javascript
-            </p>
-          </div>
-
-          <div className="p-4 flex items-center justify-center sm:justify-start gap-4 bg-gray-100 hover:bg-white dark:bg-darkPrimary hover:dark:bg-darkSecondary border rounded-sm border-gray-300 dark:border-neutral-400 transform origin-center md:origin-top group">
-            <div className="relative transition group-hover:scale-110 sm:group-hover ">
-              <SiMysql className="w-7 h-7" />
-            </div>
-            <p className="hidden sm:inline-flex text-sm md:text-base font-semibold select-none pointer-events-none">
-              MySQl
-            </p>
-          </div>
-          <div className="p-4 flex items-center justify-center sm:justify-start gap-4 bg-gray-100 hover:bg-white dark:bg-darkPrimary hover:dark:bg-darkSecondary border rounded-sm border-gray-300 dark:border-neutral-400 transform origin-center md:origin-top group">
-            <div className="relative transition group-hover:scale-110 sm:group-hover ">
-              <SiTailwindcss className="w-7 h-7" />
-            </div>
-            <p className="hidden sm:inline-flex text-sm md:text-base font-semibold select-none pointer-events-none">
-              Tailwind CSS
-            </p>
-          </div>
-          <div className="p-4 flex items-center justify-center sm:justify-start gap-4 bg-gray-100 hover:bg-white dark:bg-darkPrimary hover:dark:bg-darkSecondary border rounded-sm border-gray-300 dark:border-neutral-400 transform origin-center md:origin-top group">
-            <div className="relative transition group-hover:scale-110 sm:group-hover ">
-              <FaJava className="w-7 h-7" />
-            </div>
-            <p className="hidden sm:inline-flex text-sm md:text-base font-semibold select-none pointer-events-none">
-              JAVA Programming
-            </p>
-          </div>
-          <div className="p-4 flex items-center justify-center sm:justify-start gap-4 bg-gray-100 hover:bg-white dark:bg-darkPrimary hover:dark:bg-darkSecondary border rounded-sm border-gray-300 dark:border-neutral-400 transform origin-center md:origin-top group">
-            <div className="relative transition group-hover:scale-110 sm:group-hover ">
-              <RiReactjsLine className="w-7 h-7" />
-            </div>
-            <p className="hidden sm:inline-flex text-sm md:text-base font-semibold select-none pointer-events-none">
-              React js
-            </p>
-          </div>
-          <div className="p-4 flex items-center justify-center sm:justify-start gap-4 bg-gray-100 hover:bg-white dark:bg-darkPrimary hover:dark:bg-darkSecondary border rounded-sm border-gray-300 dark:border-neutral-400 transform origin-center md:origin-top group">
-            <div className="relative transition group-hover:scale-110 sm:group-hover">
-              <FaGithub className="w-7 h-7" />
-            </div>
-            <p className="hidden sm:inline-flex text-sm md:text-base font-semibold select-none pointer-events-none">
-              Github
-            </p>
           </div>
         </div>
       </section>
